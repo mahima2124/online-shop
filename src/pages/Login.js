@@ -31,9 +31,14 @@ const Login = () => {
   };
 
   const handleSignInSubmit = () => {
+    
     console.log(data,"============>data")
     setData({ ...data, email: data.email, password: data.password });
-    
+    console.log(data,'<><><><><><')
+    if(data){
+      navigate("/home");
+     
+    }
     console.log(data,1,"============>data")
     console.log(localStorage.getItem("values"), "=======>localStorage.getItem")
     const getUserArr = localStorage.getItem("values");
@@ -50,9 +55,11 @@ const Login = () => {
        } else {
         console.log("user login succesfulyy");
 
-        if(data){
-          navigate("/home");
-        }
+        console.log(data,'<><><><><><')
+        // if(data){
+        //   navigate("/home");
+         
+        // }
         localStorage.setItem("user_login", JSON.stringify(userLogin));
       }
     }

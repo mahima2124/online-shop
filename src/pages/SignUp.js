@@ -14,7 +14,7 @@ const SignUp = () => {
     console.log(data,'<><><><>data')
     console.log(setData,'><><><><<setData')
     if(setData){
-      navigate('/login');
+      navigate('/home');
     }
     let prevData = JSON.parse(localStorage.getItem("values"));
     console.log(prevData,'><><><><prev')
