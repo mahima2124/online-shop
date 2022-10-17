@@ -51,7 +51,7 @@ const Login = () => {
         console.log("user login succesfulyy");
 
         if(data){
-          navigate("/");
+          navigate("/home");
         }
         localStorage.setItem("user_login", JSON.stringify(userLogin));
       }

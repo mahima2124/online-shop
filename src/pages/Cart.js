@@ -104,10 +104,10 @@ const Cart = () => {
 
 
       {addProducts.cartItems.length===0 ? <div className="continueShopping" >
-        <Link style={{ textDecoration: "none", color: "gray" }} to="/"> ← 
+        <Link style={{ textDecoration: "none", color: "gray" }} to="/home"> ← 
         <span> Continue Shopping </span></Link>
       </div> : <div className="continue-shopping">
-        <Link style={{ textDecoration: "none", color: "gray" }} to="/"> ← 
+        <Link style={{ textDecoration: "none", color: "gray" }} to="/home"> ← 
         <span> Continue Shopping </span></Link>
       </div>}
       {/* <div className="continue-shopping">

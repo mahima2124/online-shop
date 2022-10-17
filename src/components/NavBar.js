@@ -12,7 +12,7 @@ const NavBar = () => {
         {location.pathname === "/signUp" || location.pathname === "/login" ? (
           <i className="fa fa-shopping-bag"></i>
         ) : (
-          <Link to="/"> <i className="fa fa-shopping-bag"></i></Link>
+          <Link to="/home"> <i className="fa fa-shopping-bag"></i></Link>
         )} ONLINE SHOPPING
       </div>
 
