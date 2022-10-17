@@ -79,7 +79,7 @@ const Login = () => {
             <button className="submit" type="button" onClick={() => handleSignInSubmit()} > LOGIN </button>
             <div className="login-here">
               <h3>Don't have an Account?</h3>
-              <Link to="/">
+              <Link to="/online-shop/">
                 <h3 className="logged">Signup Here</h3>
               </Link>
             </div>
