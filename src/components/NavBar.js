@@ -9,14 +9,14 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <div className="navbar-heading">
-        {location.pathname === "/signUp" || location.pathname === "/login" ? (
+        {location.pathname === "/" || location.pathname === "/login" ? (
           <i className="fa fa-shopping-bag"></i>
         ) : (
           <Link to="/home"> <i className="fa fa-shopping-bag"></i></Link>
         )} ONLINE SHOPPING
       </div>
 
-      {location.pathname === "/signUp" || location.pathname === "/login" ? (
+      {location.pathname === "/" || location.pathname === "/login" ? (
         <div className="cart-icon" style={{ display: "none" }}>
           <i className="fa fa-shopping-cart fa-2x " aria-hidden="true"></i>
           <span className="bag-quantity">{cartTotalQuantity}</span>
@@ -30,7 +30,7 @@ const NavBar = () => {
         </div>
       )}
 
-      {location.pathname === "/signUp" || location.pathname === "/login" ? (
+      {location.pathname === "/" || location.pathname === "/login" ? (
         <div className="logout-icon" style={{ display: "none" }}>
           <i class="fa fa-sign-out" aria-hidden="true"></i>
         </div>
