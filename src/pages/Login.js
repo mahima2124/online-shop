@@ -35,7 +35,7 @@ const Login = () => {
     console.log(data,"============>data")
     setData({ ...data, email: data.email, password: data.password });
     console.log(data,'<><><><><><')
-    if(data){
+    if(data?.email && data?.password){
       navigate("/home");
      
     }
