@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/online-shop/static/css/main.be979458.css",
-    "main.js": "/online-shop/static/js/main.6ac762ed.js",
+    "main.js": "/online-shop/static/js/main.c6d5af6f.js",
     "static/media/watch6.png": "/online-shop/static/media/watch6.9340aa0b5bf1c1ea5053.png",
     "static/media/watch4.png": "/online-shop/static/media/watch4.118c031204b81ac6f934.png",
     "static/media/watch5.png": "/online-shop/static/media/watch5.0d0dd83eacd28e83c7d6.png",
@@ -11,10 +11,10 @@
     "static/media/watch8.png": "/online-shop/static/media/watch8.541907d6d98d7df09edf.png",
     "index.html": "/online-shop/index.html",
     "main.be979458.css.map": "/online-shop/static/css/main.be979458.css.map",
-    "main.6ac762ed.js.map": "/online-shop/static/js/main.6ac762ed.js.map"
+    "main.c6d5af6f.js.map": "/online-shop/static/js/main.c6d5af6f.js.map"
   },
   "entrypoints": [
     "static/css/main.be979458.css",
-    "static/js/main.6ac762ed.js"
+    "static/js/main.c6d5af6f.js"
   ]
 }
