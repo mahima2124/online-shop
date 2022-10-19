@@ -14,7 +14,7 @@ const SignUp = () => {
     console.log(data,'<><><><>data')
     console.log(setData,'><><><><<setData')
     if(setData){
-      navigate('/home');
+      navigate('/login');
     }
     let prevData = JSON.parse(localStorage.getItem("values"));
     console.log(prevData,'><><><><prev')
@@ -105,7 +105,7 @@ const SignUp = () => {
               <h3 className="errorPhoneStyle">{error.phone}</h3>
             </div>
             <div className="input-group">
-            <i class="fa fa-lock form-icon" aria-hidden="true"></i>
+            <i className="fa fa-lock form-icon" aria-hidden="true"></i>
               <label className="password">PASSWORD :</label>
               <input type="password" name="password" placeholder="Enter your password" value={data.password} onChange={(e) => {setData({ ...data, password: e.target.value });handleSignUpFormData(e) }}/>
               <h3 className="errorStyle">{error.password}</h3>

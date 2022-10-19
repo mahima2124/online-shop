@@ -45,8 +45,8 @@ const Cart = () => {
           <div className="leftPart">
             {addProducts.cartItems.map((product) => {
               return (
-                <div className="cart">
-                  <div key={product.id} className="cartCard">
+                <div key={product.id} className="cart">
+                  <div  className="cartCard">
                     <img className="addedCartImg" src={product.img} alt="" />
                     <h5>{product.name} </h5>
 

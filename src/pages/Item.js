@@ -33,7 +33,7 @@ const Item = () => {
     <div className="descProduct">
       {selectedProducts.map((item) => {
         return (
-          <div className="details" >
+          <div className="details" key ={item.id} >
             <div className="big-img">
               <img src={item.img} alt="" />
             

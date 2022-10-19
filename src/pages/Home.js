@@ -16,7 +16,7 @@ const Home = () => {
  const products =data.map(
   (element) =>{
     return(
-      <div className='card' id={element.id}>
+      <div className='card' key={element.id}>
       <Link to="/item"> <img  className='productImg' src={element.img} alt='' onClick={() => handleItem(element)} /></Link>
       <Link to="/item"> <h3 className='watchName'>{element.name}</h3></Link>
       <Link to="/item">  <h5 className='watchOffer'>{element.offer}</h5></Link>

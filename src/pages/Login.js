@@ -5,6 +5,7 @@ const Login = () => {
   const [error, setError] = useState({ email: "", password: "" });
 
   const navigate = useNavigate();
+  const enabled = data.email.length > 0 && data.password.length > 0;
 
   function isValidEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
@@ -35,32 +36,26 @@ const Login = () => {
     console.log(data,"============>data")
     setData({ ...data, email: data.email, password: data.password });
     console.log(data,'<><><><><><')
-    if(data?.email && data?.password){
-      navigate("/home");
-     
-    }
-    console.log(data,1,"============>data")
     console.log(localStorage.getItem("values"), "=======>localStorage.getItem")
     const getUserArr = localStorage.getItem("values");
     console.log(getUserArr, "<><><><><data2");
     if (getUserArr && getUserArr.length) {
       const userData = JSON.parse(getUserArr);
       console.log(userData, "==========>userData")
-      const userLogin = userData.filter((el, k) => {
+      const userLogin = userData.filter((el) => {
         return el.email === data.email && el.password === data.password;
       });
-
+       console.log(userLogin,'<><><><>userLogin')
       if (userLogin.length === 0) {
         alert("invalid details");
        } else {
-        console.log("user login succesfulyy");
+        console.log("user login successfully");
 
         console.log(data,'<><><><><><')
-        // if(data){
-        //   navigate("/home");
-         
-        // }
-        localStorage.setItem("user_login", JSON.stringify(userLogin));
+        if(data){
+          navigate("/home");
+        }
+        localStorage.setItem("user_login", JSON.stringify(data));
       }
     }
   };
@@ -78,15 +73,15 @@ const Login = () => {
               <h3 className="errorEmailStyle">{error.email}</h3>
             </div>
             <div className="input-group">
-              <i class="fa fa-lock form-icon" aria-hidden="true"></i>
+              <i className="fa fa-lock form-icon" aria-hidden="true"></i>
               <label className="password">PASSWORD :</label>
               <input type="password" name="password" placeholder="Enter your password" onChange={(e) => handleSignInFormData(e)} />
               <h3 className="errorStyle">{error.password}</h3>
             </div>
-            <button className="submit" type="button" onClick={() => handleSignInSubmit()} > LOGIN </button>
+            <button className="submit" type="button" disabled={!enabled} onClick={() => handleSignInSubmit()} > LOGIN </button>
             <div className="login-here">
-              <h3>Don't have an Account?</h3>
-              <Link to="/online-shop/">
+              <h3>Do not have an Account?</h3>
+              <Link to="/">
                 <h3 className="logged">Signup Here</h3>
               </Link>
             </div>
